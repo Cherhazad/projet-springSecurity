@@ -20,12 +20,12 @@ public class Departement {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-//	@NotNull
+	// @NotNull
 	@Size(min = 2, max = 3, message = "Le nombre de caractère du code de département doit être compris entre 2 et 3.")
 	@Column(name = "code_dep")
 	private String codeDep;
 
-	//@NotNull
+	// @NotNull
 	@Size(min = 2, max = 255, message = "Le nom du département doit contenir au moins 2 caractères.")
 	@Column(name = "nom_departement")
 	private String nomDepartement;

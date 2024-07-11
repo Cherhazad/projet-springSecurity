@@ -1,4 +1,4 @@
-package fr.diginamic.hello.controleurs;
+package fr.diginamic.hello.restControleurs;
 
 import java.util.ArrayList;
 import java.util.List;
