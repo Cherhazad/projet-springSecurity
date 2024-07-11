@@ -40,3 +40,6 @@ build/
 *.DS_Store
 persistence.xml
 application.properties
+serenitydate.mv.db
+serenitydate.trace.db
+
