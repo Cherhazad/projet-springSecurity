@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Liste des départements</title>
+  </head>
+  	<body>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Département</th>
+        <th>Code département</th>
+		<th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="department:${departments}">
+        <td th:text="${department.nomDepartement}"></td>
+        <td th:text="${department.codeDep}"></td>
+        <td><a th:href="@{'/deleteDep/' + ${department.id}}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+	</body>
+</html>
