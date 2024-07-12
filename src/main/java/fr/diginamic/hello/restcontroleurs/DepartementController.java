@@ -1,4 +1,4 @@
-package fr.diginamic.hello.restControleurs;
+package fr.diginamic.hello.restcontroleurs;
 
 import java.util.stream.Collectors;
 
