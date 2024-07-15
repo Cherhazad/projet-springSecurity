@@ -56,6 +56,10 @@ public class UserAccount {
 		this.password = password;
 	}
 
+	public UserAccount() {
+
+	}
+
 	/**
 	 * Getter pour id
 	 * 
