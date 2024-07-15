@@ -31,7 +31,7 @@ public class VillesVueController {
 		return new ModelAndView("town/townList", model);
 		
 	}
-		
+
 	@GetMapping("/deleteTown/{id}")
 	public String getVilles(@PathVariable int id) {
 		villeRepository.deleteById(id);

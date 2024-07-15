@@ -3,6 +3,7 @@ package fr.diginamic.hello.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import fr.diginamic.hello.dao.VilleDao;
@@ -111,6 +112,17 @@ public class VilleService {
 			villeDao.delete(villeTP6ParId);
 		}
 		return villeTP6ParId;
+	}
+
+	@PreAuthorize("hasRole('ADMIN')")
+	public boolean deleteVille(int id) {
+		VilleTP6 result = villeRepo.findById(id).get();
+		if (result != null) {
+			villeRepo.deleteById(id);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
